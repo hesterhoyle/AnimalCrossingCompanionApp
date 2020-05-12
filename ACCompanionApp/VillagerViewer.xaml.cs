@@ -1,5 +1,4 @@
-﻿using AppLibrary;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,30 +10,31 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AppLibrary;
 
 namespace ACCompanionApp
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for VillagerViewer.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class VillagerViewer : Window
     {
-        public MainWindow()
+        public VillagerViewer()
         {
             InitializeComponent();
-            APIHelper.InitializeClient();
+        }
+
+        private async Task PullVillager(int villagerID)
+        {
+            var villager = await VillagerProcessor.LoadVillager(villagerID);
+            txtBlock.Text = $"{villager.NameEn}";
+
         }
 
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
-        }
-
-        private void OpenNewUserPage(object sender, RoutedEventArgs e)
-        {
-            NewUser objNewUser = new NewUser();
-            this.Content = objNewUser;
+            await PullVillager(1);
         }
     }
 }

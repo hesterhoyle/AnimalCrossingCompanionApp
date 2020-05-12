@@ -17,8 +17,8 @@ namespace AppLibrary
             {
                 if (response.IsSuccessStatusCode)
                 {
-                    VillagerModel villager = await response.Content.ReadAsAsync<VillagerModel>();
-                    return villager;
+                    VillagerResultsModel villager = await response.Content.ReadAsAsync<VillagerResultsModel>();
+                    return villager.Name;
                 }
                 else
                 {

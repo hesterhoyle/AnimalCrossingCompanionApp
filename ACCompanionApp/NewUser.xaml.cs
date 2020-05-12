@@ -17,24 +17,20 @@ using System.Windows.Shapes;
 namespace ACCompanionApp
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for NewUser.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class NewUser : Page
     {
-        public MainWindow()
+        public NewUser()
         {
             InitializeComponent();
-            APIHelper.InitializeClient();
         }
 
-        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        private void SubmitUser(object sender, RoutedEventArgs e)
         {
-        }
+            var player = new User(userName.Text, islandName.Text);
+            testTxt.Text = $"Welcome {player.GetName()} from {player.GetIsland()}";
 
-        private void OpenNewUserPage(object sender, RoutedEventArgs e)
-        {
-            NewUser objNewUser = new NewUser();
-            this.Content = objNewUser;
         }
     }
 }

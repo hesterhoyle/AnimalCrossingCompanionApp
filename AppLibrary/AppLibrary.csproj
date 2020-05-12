@@ -53,6 +53,7 @@
     <Compile Include="User.cs" />
     <Compile Include="VillagerModel.cs" />
     <Compile Include="VillagerProcessor.cs" />
+    <Compile Include="VillagerResultsModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
