@@ -6,13 +6,30 @@
       xmlns:local="clr-namespace:ACCompanionApp"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="HomePage">
+      Title="HomePage" Height="860" Width="1420">
 
-    <Grid Background="White" Loaded="Grid_Loaded">
-        <TextBlock x:Name="testText" HorizontalAlignment="Center" Height="75" Margin="151,25,128,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="521" Background="#FFF1CCCC" FontWeight="Bold" FontSize="16" Text="Welcome" TextAlignment="Center"/>
-        <TextBlock x:Name="ResiBtn" HorizontalAlignment="Left" Height="33" Margin="25,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" FontWeight="Bold" TextDecorations="{x:Null}" Background="#FFFDE7E7"/>
-        <Button x:Name="FishBtn" Content="Fish" HorizontalAlignment="Left" Height="52" Margin="61,354,0,0" VerticalAlignment="Top" Width="193" Click="GoFish"/>
-        
+    <Grid Loaded="Grid_Loaded" RequestBringIntoView="LoadPics">
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="IslandBackground.png"/>
+        </Grid.Background>
+        <TextBlock x:Name="testText" HorizontalAlignment="Center" Height="76" Margin="269,32,294,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="857" FontWeight="Bold" FontSize="36" Text="Welcome" TextAlignment="Center" Foreground="White" FontFamily="Tahoma"/>
+        <Button x:Name="FishBtn" Content="Fish" HorizontalAlignment="Left" Height="52" Margin="269,184,0,0" VerticalAlignment="Top" Width="328" Click="GoFish" FontSize="18" FontFamily="Tahoma" Background="#FF4BB02E">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="8"/>
+            </Button.Effect>
+        </Button>
+        <Image x:Name="FishImg01" HorizontalAlignment="Left" Height="100" Margin="260,252,0,0" VerticalAlignment="Top" Width="106"/>
+        <Image x:Name="FishImg02" HorizontalAlignment="Left" Height="100" Margin="383,252,0,0" VerticalAlignment="Top" Width="106"/>
+        <Image x:Name="FishImg03" HorizontalAlignment="Left" Height="100" Margin="506,252,0,0" VerticalAlignment="Top" Width="102"/>
+        <Button x:Name="BugBtn" Content="Bugs" HorizontalAlignment="Left" Height="52" Margin="798,184,0,0" VerticalAlignment="Top" Width="328" Click="GoBug" FontSize="18" FontFamily="Tahoma" Background="#FF4BB02E">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="8"/>
+            </Button.Effect>
+        </Button>
+        <Image x:Name="BugImg01" HorizontalAlignment="Left" Height="100" Margin="790,252,0,0" VerticalAlignment="Top" Width="106"/>
+        <Image x:Name="BugImg02" HorizontalAlignment="Left" Height="100" Margin="912,252,0,0" VerticalAlignment="Top" Width="106"/>
+        <Image x:Name="BugImg03" HorizontalAlignment="Left" Height="100" Margin="1036,252,0,0" VerticalAlignment="Top" Width="102"/>
+
         <DockPanel>
             <Frame x:Name="_NavigationFrame" NavigationUIVisibility="Hidden" />
         </DockPanel>

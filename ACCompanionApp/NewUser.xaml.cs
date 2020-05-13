@@ -38,8 +38,8 @@ namespace ACCompanionApp
             }
             else if (SouthernChk.IsChecked == true)
             {
-                var player = new User(userName.Text, islandName.Text, "Southern");
-                string[] playerInfo = { player.GetName(), player.GetIsland(), "Southern" };
+                var player = new User(userName.Text, islandName.Text, "South");
+                string[] playerInfo = { player.GetName(), player.GetIsland(), "South" };
                 File.WriteAllLines("player.txt", playerInfo);
                 _NavigationFrame.Navigate(new HomePage());
             }           

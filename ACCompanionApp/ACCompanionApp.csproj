@@ -61,6 +61,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Bugs.xaml.cs">
+      <DependentUpon>Bugs.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Fish.xaml.cs">
       <DependentUpon>Fish.xaml</DependentUpon>
     </Compile>
@@ -73,6 +76,10 @@
     <Compile Include="VillagerViewer.xaml.cs">
       <DependentUpon>VillagerViewer.xaml</DependentUpon>
     </Compile>
+    <Page Include="Bugs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Fish.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -137,6 +144,48 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="TomNook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="boatbg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CharTimmy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CharTommy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CharPlayer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CharPlayer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IslandBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="fish01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="fish02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="fish03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bug01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bug02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bug03.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

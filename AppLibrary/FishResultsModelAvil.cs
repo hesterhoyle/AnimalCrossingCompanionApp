@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace AppLibrary
 {
-    class FishResultsModel
+    public class FishResultsModelAvil
     {
-        public FishModel Name { get; set; }
-
-        
-
-
+        public FishModelAvil Availability { get; set; }
     }
 }

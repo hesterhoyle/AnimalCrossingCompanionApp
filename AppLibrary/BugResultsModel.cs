@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace AppLibrary
 {
-    class FishResultsModel
+    class BugResultsModel
     {
-        public FishModel Name { get; set; }
+        public BugModel Name { get; set; }
 
-        
+
 
 
     }

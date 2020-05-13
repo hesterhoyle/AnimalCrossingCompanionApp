@@ -9,9 +9,13 @@
       Title="Fish">
 
     <Grid Background="White" Loaded="GridLoad">
-        <Button x:Name="HomeBtn" Content="Home" HorizontalAlignment="Left" Height="54" Margin="722,10,0,0" VerticalAlignment="Top" Width="68"/>
-        <Label x:Name="DateTimeFish" Content="" HorizontalAlignment="Left" Height="54" Margin="30,20,0,0" VerticalAlignment="Top" Width="321"/>
-        <TextBlock x:Name="fishBlock" HorizontalAlignment="Left" Height="297" Margin="45,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="725"/>
+        <Button x:Name="HomeBtn" Content="Home" HorizontalAlignment="Left" Height="54" Margin="722,10,0,0" VerticalAlignment="Top" Width="68" Click="GoHome"/>
+        <Label x:Name="DateTimeFish" Content="" HorizontalAlignment="Left" Height="54" Margin="30,20,0,0" VerticalAlignment="Top" Width="321" FontFamily="Tahoma" FontSize="20"/>
+        <ScrollViewer x:Name="fishBlock" HorizontalAlignment="Left" Height="287" Margin="30,124,0,0" VerticalAlignment="Top" Width="736" FontFamily="Tahoma" FontSize="18"/>
+
+        <DockPanel>
+            <Frame x:Name="_NavigationFrame" NavigationUIVisibility="Hidden" />
+        </DockPanel>
 
     </Grid>
 </Page>

@@ -26,7 +26,7 @@ namespace ACCompanionApp
         {
             InitializeComponent();
             APIHelper.InitializeClient();
-            
+
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

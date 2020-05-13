@@ -5,10 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ACCompanionApp"
         mc:Ignorable="d" Loaded="Window_Loaded"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="860" Width="1420">
     <Grid>
-        
-        <Image HorizontalAlignment="Left" Height="227" Margin="222,25,0,0" VerticalAlignment="Top" Width="337" Source="logo.png" RenderTransformOrigin="0.5,0.5">
+        <Grid.Background>
+            <ImageBrush ImageSource="background.png"/>
+        </Grid.Background>
+
+
+        <Image HorizontalAlignment="Left" Height="398" Margin="424,30,0,0" VerticalAlignment="Top" Width="656" Source="logo.png" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -18,14 +22,29 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Button x:Name="NewUserBtn" Content="New User" HorizontalAlignment="Left" Height="52" Margin="299,275,0,0" VerticalAlignment="Top" Width="187" Click="OpenNewUserPage"/>
-        <Button x:Name="PrevUserBtn" Content="" Height="48" Margin="299,348,306,0" VerticalAlignment="Top" Click="PrevUser"/>
-        <Button x:Name="DelUserBtn" Content="Delete User" HorizontalAlignment="Left" Height="48" Margin="515,348,0,0" VerticalAlignment="Top" Width="93" Click="DelUser"/>
+        <Button x:Name="NewUserBtn" Content="New User" HorizontalAlignment="Left" Height="64" Margin="572,467,0,0" VerticalAlignment="Top" Width="270" Click="OpenNewUserPage" Grid.ColumnSpan="2" Background="#FF4BB02E" FontSize="24" FontFamily="Trebuchet MS">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="8" Direction="316"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="PrevUserBtn" Content="PrevUser" Height="68" Margin="572,571,570,0" VerticalAlignment="Top" Click="PrevUser" Grid.ColumnSpan="2" Background="#FF4BB02E" FontSize="24" FontFamily="Tahoma">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="8" Direction="316"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="DelUserBtn" Content="Delete" HorizontalAlignment="Left" Height="68" Margin="864,574,0,0" VerticalAlignment="Top" Width="77" Click="DelUser" Background="#FFEA942C" FontFamily="Tahoma" FontSize="18">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="8"/>
+            </Button.Effect>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="332" Margin="268,386,0,0" VerticalAlignment="Top" Width="270" Source="CharPlayer.png"/>
+        <Image HorizontalAlignment="Left" Height="354" Margin="941,364,0,0" VerticalAlignment="Top" Width="297" Source="CharPlayer2.png"/>
 
         <DockPanel>
             <Frame x:Name="_NavigationFrame" NavigationUIVisibility="Hidden" />
         </DockPanel>
+
     </Grid>
-    
+
 
 </Window>

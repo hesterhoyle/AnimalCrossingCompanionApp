@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace AppLibrary
 {
-    public class FishModel
+    public class BugModel
     {
         [JsonProperty("name-en")]
         public string NameEn { get; set; }
 
-        
+
 
 
 

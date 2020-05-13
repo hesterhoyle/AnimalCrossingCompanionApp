@@ -48,9 +48,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="APIHelper.cs" />
+    <Compile Include="BugModel.cs" />
+    <Compile Include="BugModelAvil.cs" />
+    <Compile Include="BugProcessor.cs" />
+    <Compile Include="BugProcessorAvail.cs" />
+    <Compile Include="BugResultsModel.cs" />
+    <Compile Include="BugResultsModelAvil.cs" />
     <Compile Include="FishModel.cs" />
+    <Compile Include="FishModelAvil.cs" />
     <Compile Include="FishProcessor.cs" />
+    <Compile Include="FishProcessorAvail.cs" />
     <Compile Include="FishResultsModel.cs" />
+    <Compile Include="FishResultsModelAvil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
     <Compile Include="VillagerModel.cs" />

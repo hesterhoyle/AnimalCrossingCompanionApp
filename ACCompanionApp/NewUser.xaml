@@ -4,22 +4,32 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ACCompanionApp"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="NewUser">
+      mc:Ignorable="d"
+      Title="NewUser" Height="860" Width="1420">
 
-    <Grid Background="White">
-        <TextBox x:Name="userName" HorizontalAlignment="Left" Height="43" Margin="226,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" Background="#FFD8EAD2"/>
-        <TextBlock HorizontalAlignment="Left" Height="28" Margin="226,91,0,0" TextWrapping="Wrap" Text="Your Villager's Name:" VerticalAlignment="Top" Width="185"/>
-        <TextBox x:Name="islandName" HorizontalAlignment="Left" Height="43" Margin="226,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" Background="#FFD8EAD2"/>
-        <TextBlock HorizontalAlignment="Left" Height="28" Margin="226,188,0,0" TextWrapping="Wrap" Text="Your Island's Name:" VerticalAlignment="Top" Width="185"/>
-        <Button x:Name="SubmitBtn" Content="Submit" HorizontalAlignment="Left" Height="44" Margin="311,361,0,0" VerticalAlignment="Top" Width="171" Click="SubmitUser" RenderTransformOrigin="0.488,1.582"/>
-        <TextBlock HorizontalAlignment="Left" Height="28" Margin="226,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185"><Run Text="Your Island's Hemisphere:"/><LineBreak/><Run/></TextBlock>
-        <RadioButton x:Name="NorthernChk" Content="Northern" HorizontalAlignment="Left" Margin="258,304,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="SouthernChk" Content="Southern" HorizontalAlignment="Left" Margin="380,304,0,0" VerticalAlignment="Top"/>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="boatbg.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <TextBox x:Name="userName" HorizontalAlignment="Left" Height="42" Margin="540,424,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" Background="#FFD4F0AC" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Height="28" Margin="540,396,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontFamily="Tahoma" FontSize="20"><Run Text="Your "/><Run Text="Character's "/><Run Text="Name:"/></TextBlock>
+        <TextBox x:Name="islandName" HorizontalAlignment="Left" Height="44" Margin="540,520,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" Background="#FFD4F0AC" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Height="28" Margin="540,492,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185" FontFamily="Tahoma" FontSize="20"><Run Text="Your "/><Run Text="Island's "/><Run Text="Name:"/></TextBlock>
+        <Button x:Name="SubmitBtn" Content="Submit" HorizontalAlignment="Left" Height="44" Margin="614,666,0,0" VerticalAlignment="Top" Width="171" Click="SubmitUser" RenderTransformOrigin="0.488,1.582" Background="#FF4BB02E" FontFamily="Tahoma" FontSize="24">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="8"/>
+            </Button.Effect>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Height="28" Margin="540,580,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" FontFamily="Tahoma" FontSize="20"><Run Text="Your Island's Hemisphere:"/><LineBreak/><Run/></TextBlock>
+        <RadioButton x:Name="NorthernChk" Content="Northern" HorizontalAlignment="Left" Margin="589,614,0,0" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="18"/>
+        <RadioButton x:Name="SouthernChk" Content="Southern" HorizontalAlignment="Left" Margin="720,614,0,0" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="18"/>
+        <Image HorizontalAlignment="Left" Height="282" Margin="474,92,0,0" VerticalAlignment="Top" Width="490" Source="TomNook.png"/>
+        <Image HorizontalAlignment="Left" Height="374" Margin="131,370,0,0" VerticalAlignment="Top" Width="338" Source="CharTimmy.png"/>
+        <Image HorizontalAlignment="Left" Height="348" Margin="950,0,0,116" VerticalAlignment="Bottom" Width="346" Source="CharTommy.png"/>
 
         <DockPanel>
             <Frame x:Name="_NavigationFrame" NavigationUIVisibility="Hidden" />
         </DockPanel>
+
     </Grid>
 </Page>

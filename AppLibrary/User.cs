@@ -26,6 +26,11 @@ namespace AppLibrary
             return _island;
         }
 
+        public string GetHemisphere()
+        {
+            return _hemisphere;
+        }
+
 
         //Constructors
         public User(string name, string island, string hemisphere)
