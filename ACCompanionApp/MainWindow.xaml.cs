@@ -1,6 +1,7 @@
 ﻿using AppLibrary;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,16 +26,50 @@ namespace ACCompanionApp
         {
             InitializeComponent();
             APIHelper.InitializeClient();
+            
         }
 
-        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            if (File.Exists("player.txt"))
+            {
+                string[] playerArr = File.ReadAllLines("player.txt");
+                User player = new User(playerArr[0], playerArr[1], playerArr[2]);
+                PrevUserBtn.Content = $"User: {player.GetName()}";
+            }
+            else
+            {
+                PrevUserBtn.Visibility = Visibility.Hidden;
+                DelUserBtn.Visibility = Visibility.Hidden;
+            }
         }
 
         private void OpenNewUserPage(object sender, RoutedEventArgs e)
         {
-            NewUser objNewUser = new NewUser();
-            this.Content = objNewUser;
+
+            _NavigationFrame.Navigate(new NewUser());
+
+        }
+
+        private void PrevUser(object sender, RoutedEventArgs e)
+        {
+            if (File.Exists("player.txt"))
+            {
+                _NavigationFrame.Navigate(new HomePage());
+            }
+            else
+            {
+                PrevUserBtn.Visibility = Visibility.Hidden;
+                DelUserBtn.Visibility = Visibility.Hidden;
+            }
+            
+        }
+
+        private void DelUser(object sender, RoutedEventArgs e)
+        {
+            File.Delete("player.txt");
+            PrevUserBtn.Visibility = Visibility.Hidden;
+            DelUserBtn.Visibility = Visibility.Hidden;
         }
     }
 }

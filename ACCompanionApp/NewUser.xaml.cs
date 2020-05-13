@@ -1,6 +1,7 @@
 ﻿using AppLibrary;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,9 +29,20 @@ namespace ACCompanionApp
 
         private void SubmitUser(object sender, RoutedEventArgs e)
         {
-            var player = new User(userName.Text, islandName.Text);
-            testTxt.Text = $"Welcome {player.GetName()} from {player.GetIsland()}";
-
+            if (NorthernChk.IsChecked == true)
+            {
+                var player = new User(userName.Text, islandName.Text, "North");
+                string[] playerInfo = { player.GetName(), player.GetIsland(), "North" };
+                File.WriteAllLines("player.txt", playerInfo);
+                _NavigationFrame.Navigate(new HomePage());
+            }
+            else if (SouthernChk.IsChecked == true)
+            {
+                var player = new User(userName.Text, islandName.Text, "Southern");
+                string[] playerInfo = { player.GetName(), player.GetIsland(), "Southern" };
+                File.WriteAllLines("player.txt", playerInfo);
+                _NavigationFrame.Navigate(new HomePage());
+            }           
         }
     }
 }

@@ -7,6 +7,7 @@
         mc:Ignorable="d" Loaded="Window_Loaded"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        
         <Image HorizontalAlignment="Left" Height="227" Margin="222,25,0,0" VerticalAlignment="Top" Width="337" Source="logo.png" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
@@ -17,7 +18,14 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Button x:Name="NewUserBtn" Content="New User" HorizontalAlignment="Left" Height="52" Margin="288,274,0,0" VerticalAlignment="Top" Width="187" Click="OpenNewUserPage"/>
+        <Button x:Name="NewUserBtn" Content="New User" HorizontalAlignment="Left" Height="52" Margin="299,275,0,0" VerticalAlignment="Top" Width="187" Click="OpenNewUserPage"/>
+        <Button x:Name="PrevUserBtn" Content="" Height="48" Margin="299,348,306,0" VerticalAlignment="Top" Click="PrevUser"/>
+        <Button x:Name="DelUserBtn" Content="Delete User" HorizontalAlignment="Left" Height="48" Margin="515,348,0,0" VerticalAlignment="Top" Width="93" Click="DelUser"/>
 
+        <DockPanel>
+            <Frame x:Name="_NavigationFrame" NavigationUIVisibility="Hidden" />
+        </DockPanel>
     </Grid>
+    
+
 </Window>

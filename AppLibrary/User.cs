@@ -12,6 +12,7 @@ namespace AppLibrary
         //wkeijowewiqheiqw
         private string _name;
         private string _island;
+        private string _hemisphere;
 
 
         //Getters and Setters
@@ -27,10 +28,11 @@ namespace AppLibrary
 
 
         //Constructors
-        public User(string name, string island)
+        public User(string name, string island, string hemisphere)
         {
             _name = name;
             _island = island;
+            _hemisphere = hemisphere;
         }
 
 

@@ -13,8 +13,13 @@
         <TextBlock HorizontalAlignment="Left" Height="28" Margin="226,91,0,0" TextWrapping="Wrap" Text="Your Villager's Name:" VerticalAlignment="Top" Width="185"/>
         <TextBox x:Name="islandName" HorizontalAlignment="Left" Height="43" Margin="226,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" Background="#FFD8EAD2"/>
         <TextBlock HorizontalAlignment="Left" Height="28" Margin="226,188,0,0" TextWrapping="Wrap" Text="Your Island's Name:" VerticalAlignment="Top" Width="185"/>
-        <Button x:Name="SubmitBtn" Content="Submit" HorizontalAlignment="Left" Height="44" Margin="310,282,0,0" VerticalAlignment="Top" Width="171" Click="SubmitUser"/>
-        <TextBlock x:Name="testTxt" HorizontalAlignment="Left" Height="52" Margin="189,360,0,0" TextWrapping="Wrap" Text="test" VerticalAlignment="Top" Width="459"/>
+        <Button x:Name="SubmitBtn" Content="Submit" HorizontalAlignment="Left" Height="44" Margin="311,361,0,0" VerticalAlignment="Top" Width="171" Click="SubmitUser" RenderTransformOrigin="0.488,1.582"/>
+        <TextBlock HorizontalAlignment="Left" Height="28" Margin="226,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185"><Run Text="Your Island's Hemisphere:"/><LineBreak/><Run/></TextBlock>
+        <RadioButton x:Name="NorthernChk" Content="Northern" HorizontalAlignment="Left" Margin="258,304,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="SouthernChk" Content="Southern" HorizontalAlignment="Left" Margin="380,304,0,0" VerticalAlignment="Top"/>
 
+        <DockPanel>
+            <Frame x:Name="_NavigationFrame" NavigationUIVisibility="Hidden" />
+        </DockPanel>
     </Grid>
 </Page>

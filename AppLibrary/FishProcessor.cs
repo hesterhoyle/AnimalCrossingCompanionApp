@@ -10,17 +10,38 @@ namespace AppLibrary
 {
     public class FishProcessor
     {
-        public string LoadFish()
+        public static async Task<FishModel> LoadFish(int fishID)
         {
-            string url = "http://acnhapi.com/fish/";
-            return url;
+            string url = "";
+
+
+            if (fishID == 0)
+            {
+                url = "http://acnhapi.com/fish/";
+            }
+            else
+            {
+                url = $"http://acnhapi.com/fish/{fishID}";
+            }
+
+            using (HttpResponseMessage response = await APIHelper.ApiClient.GetAsync(url))
+            {
+                if (response.IsSuccessStatusCode)
+                {
+                    FishResultsModel fish = await response.Content.ReadAsAsync<FishResultsModel>();
+                    return fish.Name;
+
+                }
+                else
+                {
+                    throw new Exception(response.ReasonPhrase);
+                }
+            }
+
+
         }
 
-        public string LoadFish(string fish)
-        {
-            string url = $"http://acnhapi.com/fish/{fish}";
-            return url;
-        }
+
 
     }
 }
