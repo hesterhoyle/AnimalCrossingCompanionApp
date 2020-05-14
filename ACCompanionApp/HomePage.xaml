@@ -29,10 +29,17 @@
         <Image x:Name="BugImg01" HorizontalAlignment="Left" Height="100" Margin="790,252,0,0" VerticalAlignment="Top" Width="106"/>
         <Image x:Name="BugImg02" HorizontalAlignment="Left" Height="100" Margin="912,252,0,0" VerticalAlignment="Top" Width="106"/>
         <Image x:Name="BugImg03" HorizontalAlignment="Left" Height="100" Margin="1036,252,0,0" VerticalAlignment="Top" Width="102"/>
-
+        <Button x:Name="VillagerBtn" Content="Villager Search" HorizontalAlignment="Left" Height="52" Margin="506,460,0,0" VerticalAlignment="Top" Width="328" Click="GoVillagers" FontSize="18" FontFamily="Tahoma" Background="#FF4BB02E">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="8"/>
+            </Button.Effect>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="230" Margin="383,539,0,0" VerticalAlignment="Top" Width="587" Source="VillagersMulti.png"/>
+        
         <DockPanel>
             <Frame x:Name="_NavigationFrame" NavigationUIVisibility="Hidden" />
         </DockPanel>
+
 
     </Grid>
 </Page>

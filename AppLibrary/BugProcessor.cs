@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace AppLibrary
 {
+    // Processing the API to get the bug name
     public class BugProcessor
     {
         public static async Task<BugModel> LoadBug(int bugID)
@@ -17,11 +18,11 @@ namespace AppLibrary
 
             if (bugID == 0)
             {
-                url = "http://acnhapi.com/bug";
+                url = "http://acnhapi.com/bugs/";
             }
             else
             {
-                url = $"http://acnhapi.com/bug/{bugID}";
+                url = $"http://acnhapi.com/bugs/{bugID}";
             }
 
             using (HttpResponseMessage response = await APIHelper.ApiClient.GetAsync(url))

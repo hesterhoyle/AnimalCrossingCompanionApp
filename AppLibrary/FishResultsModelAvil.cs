@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppLibrary
 {
+    // fish model for getting availability (the first level, to access all the info inside this level)
     public class FishResultsModelAvil
     {
         public FishModelAvil Availability { get; set; }

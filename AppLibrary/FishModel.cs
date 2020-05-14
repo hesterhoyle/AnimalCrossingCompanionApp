@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace AppLibrary
 {
+    //model to pull the name-en information for the fish from the API
     public class FishModel
     {
         [JsonProperty("name-en")]

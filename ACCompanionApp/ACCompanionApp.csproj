@@ -73,8 +73,8 @@
     <Compile Include="NewUser.xaml.cs">
       <DependentUpon>NewUser.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VillagerViewer.xaml.cs">
-      <DependentUpon>VillagerViewer.xaml</DependentUpon>
+    <Compile Include="Villagers.xaml.cs">
+      <DependentUpon>Villagers.xaml</DependentUpon>
     </Compile>
     <Page Include="Bugs.xaml">
       <SubType>Designer</SubType>
@@ -104,7 +104,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="VillagerViewer.xaml">
+    <Page Include="Villagers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -170,22 +170,22 @@
     <Resource Include="IslandBackground.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="fish01.png" />
+    <Resource Include="oceanBack.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="fish02.png" />
+    <Resource Include="bugBack.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="fish03.png" />
+    <Resource Include="VillagersMulti.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="bug01.png" />
+    <Resource Include="ac-new-horizons-character-pattern-1280x1024-1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="bug02.png" />
+    <Resource Include="Melba.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="bug03.png" />
+    <Resource Include="Sheep.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

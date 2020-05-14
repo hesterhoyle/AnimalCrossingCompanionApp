@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace AppLibrary
 {
+    // model to pull the various availability information for the fish from the API
     public class FishModelAvil
     {
 

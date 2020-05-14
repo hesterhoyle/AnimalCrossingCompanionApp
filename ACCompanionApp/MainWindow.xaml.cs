@@ -28,7 +28,7 @@ namespace ACCompanionApp
             APIHelper.InitializeClient();
 
         }
-
+        // Checks for previous/existing user stored as player.txt file. If yes, prev player button is active
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             if (File.Exists("player.txt"))
@@ -44,6 +44,7 @@ namespace ACCompanionApp
             }
         }
 
+        // Navigate buttons to User Create page and straight to home page if using existing player
         private void OpenNewUserPage(object sender, RoutedEventArgs e)
         {
 
@@ -65,6 +66,7 @@ namespace ACCompanionApp
             
         }
 
+        // Deletes the previous player, i.e. deletes the player.txt file
         private void DelUser(object sender, RoutedEventArgs e)
         {
             File.Delete("player.txt");

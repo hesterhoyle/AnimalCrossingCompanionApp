@@ -6,12 +6,31 @@
       xmlns:local="clr-namespace:ACCompanionApp"
       mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Fish">
+      Title="Fish" Height="860" Width="1420">
 
-    <Grid Background="White" Loaded="GridLoad">
-        <Button x:Name="HomeBtn" Content="Home" HorizontalAlignment="Left" Height="54" Margin="722,10,0,0" VerticalAlignment="Top" Width="68" Click="GoHome"/>
-        <Label x:Name="DateTimeFish" Content="" HorizontalAlignment="Left" Height="54" Margin="30,20,0,0" VerticalAlignment="Top" Width="321" FontFamily="Tahoma" FontSize="20"/>
-        <ScrollViewer x:Name="fishBlock" HorizontalAlignment="Left" Height="287" Margin="30,124,0,0" VerticalAlignment="Top" Width="736" FontFamily="Tahoma" FontSize="18"/>
+    <Grid Loaded="GridLoad">
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="oceanBack.png"/>
+        </Grid.Background>
+        <Button x:Name="HomeBtn" Content="Home" HorizontalAlignment="Left" Height="54" Margin="1304,40,0,0" VerticalAlignment="Top" Width="68" Click="GoHome" FontFamily="Tahoma" FontSize="18"/>
+        <Label x:Name="DateTimeFish" Content="DateTime&#xD;&#xA;DateTime" HorizontalAlignment="Left" Height="93" Margin="30,20,0,0" VerticalAlignment="Top" Width="1151" FontFamily="Tahoma" FontSize="20"/>
+        <ScrollViewer x:Name="fishBlock" HorizontalAlignment="Left" Height="286" Margin="318,362,0,0" VerticalAlignment="Top" Width="736" FontFamily="Tahoma" FontSize="18">
+            <ScrollViewer.Background>
+                <SolidColorBrush Color="White" Opacity="0.65"/>
+            </ScrollViewer.Background>
+        </ScrollViewer>
+        <Image x:Name="Fish00" HorizontalAlignment="Left" Height="133" Margin="95,118,0,0" VerticalAlignment="Top" Width="154"/>
+        <Image x:Name="Fish01" HorizontalAlignment="Left" Height="133" Margin="306,118,0,0" VerticalAlignment="Top" Width="154"/>
+        <Image x:Name="Fish02" HorizontalAlignment="Left" Height="133" Margin="530,118,0,0" VerticalAlignment="Top" Width="154"/>
+        <Image x:Name="Fish03" HorizontalAlignment="Left" Height="133" Margin="741,118,0,0" VerticalAlignment="Top" Width="154"/>
+        <Image x:Name="Fish04" HorizontalAlignment="Left" Height="133" Margin="966,118,0,0" VerticalAlignment="Top" Width="154"/>
+        <Image x:Name="Fish05" HorizontalAlignment="Left" Height="133" Margin="1176,118,0,0" VerticalAlignment="Top" Width="154"/>
+        <TextBlock x:Name="Text00" HorizontalAlignment="Left" Height="57" Margin="74,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" TextAlignment="Center" FontFamily="Tahoma" FontSize="16"/>
+        <TextBlock x:Name="Text01" HorizontalAlignment="Left" Height="57" Margin="292,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" TextAlignment="Center" FontFamily="Tahoma" FontSize="16"/>
+        <TextBlock x:Name="Text02" HorizontalAlignment="Left" Height="57" Margin="509,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" TextAlignment="Center" FontFamily="Tahoma" FontSize="16"/>
+        <TextBlock x:Name="Text03" HorizontalAlignment="Left" Height="57" Margin="724,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" TextAlignment="Center" FontFamily="Tahoma" FontSize="16"/>
+        <TextBlock x:Name="Text04" HorizontalAlignment="Left" Height="57" Margin="948,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" TextAlignment="Center" FontFamily="Tahoma" FontSize="16"/>
+        <TextBlock x:Name="Text05" HorizontalAlignment="Left" Height="57" Margin="1161,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" TextAlignment="Center" FontFamily="Tahoma" FontSize="16"/>
 
         <DockPanel>
             <Frame x:Name="_NavigationFrame" NavigationUIVisibility="Hidden" />

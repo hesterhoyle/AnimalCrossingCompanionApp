@@ -27,6 +27,7 @@ namespace ACCompanionApp
             InitializeComponent();
         }
 
+        // Creates a player using the User class
         private void SubmitUser(object sender, RoutedEventArgs e)
         {
             if (NorthernChk.IsChecked == true)

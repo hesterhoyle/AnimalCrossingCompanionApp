@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace AppLibrary
 {
+    //processing the API for the bug availability 
     public class BugProcessorAvail
     {
         public static async Task<BugModelAvil> LoadBugAvil(int bugID)

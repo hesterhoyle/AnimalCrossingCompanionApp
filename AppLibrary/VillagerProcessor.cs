@@ -11,7 +11,16 @@ namespace AppLibrary
     {
         public static async Task<VillagerModel> LoadVillager(int villagerID)
         {
-            string url = $"http://acnhapi.com/villagers/{villagerID}";
+            string url = "";
+
+            if (villagerID == 0)
+            {
+                url = "http://acnhapi.com/villagers/";
+            }
+            else
+            {
+                url = $"http://acnhapi.com/villagers/{villagerID}";
+            }
 
             using (HttpResponseMessage response = await APIHelper.ApiClient.GetAsync(url))
             {
@@ -19,6 +28,7 @@ namespace AppLibrary
                 {
                     VillagerResultsModel villager = await response.Content.ReadAsAsync<VillagerResultsModel>();
                     return villager.Name;
+
                 }
                 else
                 {

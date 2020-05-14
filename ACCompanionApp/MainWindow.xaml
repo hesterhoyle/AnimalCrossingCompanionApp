@@ -8,7 +8,7 @@
         Title="MainWindow" Height="860" Width="1420">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="background.png"/>
+            <ImageBrush ImageSource="background.png" Stretch="UniformToFill"/>
         </Grid.Background>
 
 

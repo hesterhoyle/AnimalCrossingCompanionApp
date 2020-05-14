@@ -9,5 +9,7 @@ namespace AppLibrary
     public class VillagerResultsModel
     {
         public VillagerModel Name { get; set; }
+
+
     }
 }

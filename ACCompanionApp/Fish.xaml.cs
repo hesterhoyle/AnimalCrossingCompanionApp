@@ -22,12 +22,17 @@ namespace ACCompanionApp
     /// </summary>
     public partial class Fish : Page
     {
+        // lists to add into
         List<int> fishNum = new List<int>();
+        List<int> fishPics = new List<int>();
+        List<string> fishNames = new List<string>();
         string Month;
 
+        // getting the player info
         static string[] playerArr = File.ReadAllLines("player.txt");
         User player = new User(playerArr[0], playerArr[1], playerArr[2]);
 
+        // array of months
         string[] months = new string[]
             {
                 "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
@@ -37,6 +42,8 @@ namespace ACCompanionApp
         public Fish()
         {
             InitializeComponent();
+
+            // Setting the current month, and displaying current date and time
             DateTimeFish.Content = $"The current date and time is {DateTime.Now.ToString()}";
             if (DateTime.Now.ToString("MM") == "01")
             {
@@ -91,6 +98,8 @@ namespace ACCompanionApp
             
         }
 
+        // Creating a list of fishIDs of the fish currently in season (for each hemisphere)
+        // Starts check by if available all year, then narrowing down by each month it appears
         private async Task CurrentFish(int fishID)
         {
             
@@ -351,26 +360,75 @@ namespace ACCompanionApp
 
         }
 
+        // puts the fish names into the scroll block text
         private async Task PullFish(int fishID)
         {
             var fish = await FishProcessor.LoadFish(fishID);
             fishBlock.Content += $"\n {fish.NameEn.ToUpper()} ";
         }
 
+        // adds the names of the fish to a list, for the labels (picture section)
+        private async Task ForFishPics(int fishID)
+        {
+            var fish = await FishProcessor.LoadFish(fishID);
+            fishNames.Add(fish.NameEn);
+        }
+
+
+
         private async void GridLoad(object sender, RoutedEventArgs e)
         {
-
+            // running through all 80 fish to check if current
             for (int i = 1; i <= 80; i++)
             {
                 await CurrentFish(i);
             }
 
+            // writing names of all current fish to scroll block
             foreach (int f in fishNum)
             {
                 await PullFish(f);
             }
+
+            // pulls the fishID for the first 6 fish in the list (for the pictures)
+            for (int p = 0; p <= 5; p++)
+            {
+                fishPics.Add(fishNum[p]);
+            }
+
+            // pulling the names of the fish for the pictures
+            foreach (int g in fishPics)
+            {
+                await ForFishPics(g);
+            }
+
+            // adding images with names of the first 6 fish available
+            var uriSource0 = new Uri($"http://acnhapi.com/icons/fish/{fishNum[0]}");
+            Fish00.Source = new BitmapImage(uriSource0);
+            Text00.Text = $"{fishNames[0].ToUpper()}";
+
+            var uriSource1 = new Uri($"http://acnhapi.com/icons/fish/{fishNum[1]}");
+            Fish01.Source = new BitmapImage(uriSource1);
+            Text01.Text = $"{fishNames[1].ToUpper()}";
+
+            var uriSource2 = new Uri($"http://acnhapi.com/icons/fish/{fishNum[2]}");
+            Fish02.Source = new BitmapImage(uriSource2);
+            Text02.Text = $"{fishNames[2].ToUpper()}";
+
+            var uriSource3 = new Uri($"http://acnhapi.com/icons/fish/{fishNum[3]}");
+            Fish03.Source = new BitmapImage(uriSource3);
+            Text03.Text = $"{fishNames[3].ToUpper()}";
+
+            var uriSource4 = new Uri($"http://acnhapi.com/icons/fish/{fishNum[4]}");
+            Fish04.Source = new BitmapImage(uriSource4);
+            Text04.Text = $"{fishNames[4].ToUpper()}";
+
+            var uriSource5 = new Uri($"http://acnhapi.com/icons/fish/{fishNum[5]}");
+            Fish05.Source = new BitmapImage(uriSource5);
+            Text05.Text = $"{fishNames[5].ToUpper()}";
         }
 
+        // navigate back to the home page
         private void GoHome(object sender, RoutedEventArgs e)
         {
             _NavigationFrame.Navigate(new HomePage());
