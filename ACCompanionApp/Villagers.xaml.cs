@@ -31,6 +31,7 @@ namespace ACCompanionApp
 
         private async void SearchVillager(object sender, RoutedEventArgs e)
         {
+            SearchedVillager = 0;
             for (int i = 1; i <= 391; i++)
             {
                 await PullVillager(i);
@@ -38,14 +39,16 @@ namespace ACCompanionApp
             if (SearchedVillager == 0)
             {
                 ErrorMessage.Text = "Error: No Villager Found";
+                
             }
             else if (SearchedVillager > 0)
             {
                 var villager = await VillagerProcessor.LoadVillager(SearchedVillager);
+                var villager2 = await VillagerProcessor2.LoadVillager(SearchedVillager);
                 ErrorMessage.Text = " ";
                 var uriSource0 = new Uri($"http://acnhapi.com/images/villagers/{SearchedVillager}");
                 Vill00.Source = new BitmapImage(uriSource0);
-                VillagerInfo.Text = $"Name: {villager.NameEn}\nPersonality: {villager.Personality}";
+                VillagerInfo.Text = $"Name: {villager.NameEn}\nPersonality: {villager2.Personality}\nSpecies: {villager2.Species}\nGender: {villager2.Gender}\nBirthday: {villager2.Birthday}";
             }
         }
 

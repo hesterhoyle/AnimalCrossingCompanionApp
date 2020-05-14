@@ -12,7 +12,7 @@ namespace AppLibrary
         [JsonProperty("name-en")]
         public string NameEn { get; set; }
 
-        public string Personality { get; set; }
+        
 
     }
 }

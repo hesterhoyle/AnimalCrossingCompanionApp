@@ -63,7 +63,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
     <Compile Include="VillagerModel.cs" />
+    <Compile Include="VillagerModel2.cs" />
     <Compile Include="VillagerProcessor.cs" />
+    <Compile Include="VillagerProcessor2.cs" />
     <Compile Include="VillagerResultsModel.cs" />
   </ItemGroup>
   <ItemGroup>

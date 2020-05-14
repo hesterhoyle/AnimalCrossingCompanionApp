@@ -12,27 +12,27 @@
         <Grid.Background>
             <ImageBrush Stretch="UniformToFill" ImageSource="ac-new-horizons-character-pattern-1280x1024-1.jpg" TileMode="Tile"/>
         </Grid.Background>
-        <TextBox x:Name="SearchBar" HorizontalAlignment="Left" Height="82" Margin="425,394,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" Background="#FFC1E671" FontSize="20" FontFamily="Tahoma"/>
-        <Button x:Name="SearchBtn" Content="Search" HorizontalAlignment="Left" Height="77" Margin="549,514,0,0" VerticalAlignment="Top" Width="283" Click="SearchVillager" FontFamily="Tahoma" FontSize="18" Background="#FF4BB02E">
+        <TextBox x:Name="SearchBar" HorizontalAlignment="Left" Height="61" Margin="448,353,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" Background="#FFC1E671" FontSize="20" FontFamily="Tahoma"/>
+        <Button x:Name="SearchBtn" Content="Search" HorizontalAlignment="Left" Height="78" Margin="543,434,0,0" VerticalAlignment="Top" Width="282" Click="SearchVillager" FontFamily="Tahoma" FontSize="18" Background="#FF4BB02E">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="8"/>
             </Button.Effect>
         </Button>
-        <Image x:Name="Vill00" HorizontalAlignment="Left" Height="160" Margin="425,630,0,0" VerticalAlignment="Top" Width="180"/>
-        <TextBlock x:Name="VillagerInfo" HorizontalAlignment="Left" Height="186" Margin="611,630,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="452" FontSize="20" FontFamily="Tahoma"/>
-        <TextBlock x:Name="ErrorMessage" HorizontalAlignment="Left" Height="48" Margin="533,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="274" FontSize="20" FontFamily="Tahoma"/>
-        <Button x:Name="HomeBtn" Content="Home" HorizontalAlignment="Left" Height="92" Margin="1266,32,0,0" VerticalAlignment="Top" Width="114" Click="GoHome" FontFamily="Tahoma" FontSize="16"/>
-        <Image x:Name="rVillager0" HorizontalAlignment="Left" Height="160" Margin="237,122,0,0" VerticalAlignment="Top" Width="178"/>
-        <Image x:Name="rVillager1" HorizontalAlignment="Left" Height="160" Margin="477,122,0,0" VerticalAlignment="Top" Width="178"/>
-        <Image x:Name="rVillager2" HorizontalAlignment="Left" Height="160" Margin="713,122,0,0" VerticalAlignment="Top" Width="178"/>
-        <Image x:Name="rVillager3" HorizontalAlignment="Left" Height="158" Margin="981,124,0,0" VerticalAlignment="Top" Width="178"/>
-        <TextBlock x:Name="rName0" HorizontalAlignment="Left" Height="50" Margin="237,288,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="178" FontFamily="Tahoma" FontSize="18"/>
-        <TextBlock x:Name="rName1" HorizontalAlignment="Left" Height="50" Margin="477,290,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="178" FontFamily="Tahoma" FontSize="18"/>
-        <TextBlock x:Name="rName2" HorizontalAlignment="Left" Height="50" Margin="713,290,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="178" FontFamily="Tahoma" FontSize="18"/>
-        <TextBlock x:Name="rName3" HorizontalAlignment="Left" Height="50" Margin="981,290,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="178" FontFamily="Tahoma" FontSize="18"/>
-        <TextBlock HorizontalAlignment="Left" Height="54" Margin="382,48,0,0" TextWrapping="Wrap" Text="Introducing..." TextAlignment="Center" VerticalAlignment="Top" Width="686" FontFamily="Tahoma" FontSize="36" RenderTransformOrigin="0.456,0.611"/>
-        <Image HorizontalAlignment="Left" Height="302" Margin="112,356,0,0" VerticalAlignment="Top" Width="234" Source="Melba.png"/>
-        <Image HorizontalAlignment="Left" Height="300" Margin="1015,378,0,0" VerticalAlignment="Top" Width="234" Source="Sheep.png"/>
+        <Image x:Name="Vill00" HorizontalAlignment="Left" Height="249" Margin="346,546,0,0" VerticalAlignment="Top" Width="277"/>
+        <TextBlock x:Name="VillagerInfo" HorizontalAlignment="Left" Height="249" Margin="648,546,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="372" FontSize="20" FontFamily="Tahoma"/>
+        <TextBlock x:Name="ErrorMessage" HorizontalAlignment="Left" Height="48" Margin="551,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="274" FontSize="20" FontFamily="Tahoma"/>
+        <Button x:Name="HomeBtn" Content="Home" HorizontalAlignment="Left" Height="77" Margin="1280,41,0,0" VerticalAlignment="Top" Width="98" Click="GoHome" FontFamily="Tahoma" FontSize="16" RenderTransformOrigin="0.5,1.13"/>
+        <Image x:Name="rVillager0" HorizontalAlignment="Left" Height="160" Margin="231,86,0,0" VerticalAlignment="Top" Width="178"/>
+        <Image x:Name="rVillager1" HorizontalAlignment="Left" Height="160" Margin="471,86,0,0" VerticalAlignment="Top" Width="178"/>
+        <Image x:Name="rVillager2" HorizontalAlignment="Left" Height="160" Margin="707,86,0,0" VerticalAlignment="Top" Width="178"/>
+        <Image x:Name="rVillager3" HorizontalAlignment="Left" Height="158" Margin="975,88,0,0" VerticalAlignment="Top" Width="178"/>
+        <TextBlock x:Name="rName0" HorizontalAlignment="Left" Height="50" Margin="231,252,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="178" FontFamily="Tahoma" FontSize="18"/>
+        <TextBlock x:Name="rName1" HorizontalAlignment="Left" Height="50" Margin="471,254,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="178" FontFamily="Tahoma" FontSize="18"/>
+        <TextBlock x:Name="rName2" HorizontalAlignment="Left" Height="50" Margin="707,254,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="178" FontFamily="Tahoma" FontSize="18"/>
+        <TextBlock x:Name="rName3" HorizontalAlignment="Left" Height="50" Margin="975,254,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="178" FontFamily="Tahoma" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Height="54" Margin="376,12,0,0" TextWrapping="Wrap" Text="Introducing..." TextAlignment="Center" VerticalAlignment="Top" Width="686" FontFamily="Tahoma" FontSize="36" RenderTransformOrigin="0.456,0.611"/>
+        <Image HorizontalAlignment="Left" Height="302" Margin="134,315,0,0" VerticalAlignment="Top" Width="234" Source="Melba.png"/>
+        <Image HorizontalAlignment="Left" Height="300" Margin="1038,337,0,0" VerticalAlignment="Top" Width="234" Source="Sheep.png"/>
 
         <DockPanel>
             <Frame x:Name="_NavigationFrame" NavigationUIVisibility="Hidden" />
